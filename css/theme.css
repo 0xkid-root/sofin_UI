@@ -1732,7 +1732,7 @@ video {
 }.text-\[64px\]{
   font-size: 64px;
 }.text-base{
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.5rem;
 }.text-lg{
   font-size: 1.125rem;
