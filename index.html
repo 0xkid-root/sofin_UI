@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Sofin | The execution layer for trustless social finance</title>
+      
+        <!--Meta For No Index-->
+        <meta name="robots" content="noindex, Nofollow, Noimageindex">
+        
+        <!-- mobile responsive meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      
+        <!-- Stylesheets -->
+      
+        <link href="vendor/fontawesome/all.css" rel="stylesheet">
+        <link href="vendor/fancybox/fancybox.css" rel="stylesheet">
+        <link href="vendor/swiper/swiper.css" rel="stylesheet">
+        <link href="vendor/aos/aos.css" rel="stylesheet">
+        <link href="css/theme.css" rel="stylesheet">
+      
+        <!--Favicon-->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/logo/logo.ico">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/logo/logo.ico">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/logo/logo.ico">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/logo/logo.ico">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/logo/logo.ico">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/logo/logo.ico">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/logo/logo.ico">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/logo/logo.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/logo/logo.ico">
+        <link rel="icon" type="image/png" sizes="192x192" href="images/logo/logo.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/logo/logo.ico">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/logo/logo.ico">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/logo/logo.ico">
+        <link rel="shortcut icon" href="images/logo/logo.ico" type="image/x-icon">
+        <link rel="icon" href="images/logo/logo.ico" type="image/x-icon">
+      </head>
+      
+
+
+      <body class="relative overflow-x-hidden  text-base antialiased bg-white dark:bg-dark-300 font-Inter">
+      
+        <header class="fixed left-0 pt-8 z-[1000000000] duration-500 transition-all w-full bg-transparent" id="mainnavigationBar">
+            <nav class="container flex items-center">
+              <div class="nav-logo xl:min-w-[300px]">
+                <a href="#">
+                  <img src="images/logo/Logo_s.png" alt="logo" class="dark:hidden">
+                  <img src="images/logo/Logo_s.png" alt="logo dark version" class="hidden dark:inline-block">
+                </a>
+              </div>
+              <ul class="nav-list hidden lg:flex mx-auto bg-white dark:bg-dark-200 p-2.5 shadow-nav rounded-large [&>*:not(:last-child)]:me-1">
+                <li class="relative group">
+                  <a href="#home" class="nav-link font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors">
+                    Home
+                  </a>
+                </li>
+                <li class="relative group">
+                  <a href="#about" class="nav-link font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors">
+                    About
+                  </a>
+                </li>
+                <li class="relative group ">
+                  <a href="#service" class="nav-link  font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors">
+                    Services
+                  </a>
+                </li>
+                <li class="relative group">
+                  <a href="#trust" class="nav-link font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors">
+                    Trust
+                  </a>
+                </li>
+                <li class="relative group">
+                  <a href="https://docs.sofin.app" target="_blank" rel="noopener noreferrer" class="nav-link font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors">
+                    Docs
+                  </a>
+                </li>
+                <li class="relative group">
+                  <a href="#faq" class="nav-link font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors">
+                    FAQ
+                  </a>
+                </li>
+
+              </ul>
+          
+              <ul class="flex items-center max-lg:ml-auto [&>*:not(:last-child)]:me-2.5">
+
+                <li>
+                  <button id="theme-toggle" type="button">
+
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    </svg>
+                  </button>
+                </li>
+                
+                <li>
+                  <button id="open-btn"></button>
+                </li>
+                <li class="max-lg:hidden">
+                  <a href="#" class="btn btn-navbar btn-sm">
+                    LOGIN
+                  </a>
+                </li>
+
+                <li class="max-lg:inline-block lg:hidden">
+                  <button class="outline-none mobile-menu-button w-10 h-10 rounded-full bg-white dark:bg-dark-200 relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="14" viewBox="0 0 22 14" fill="none" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                      <path d="M0 1C0 0.447715 0.447715 0 1 0H21C21.5523 0 22 0.447715 22 1C22 1.55228 21.5523 2 21 2H1C0.447716 2 0 1.55228 0 1Z" fill="" class="fill-paragraph dark:fill-white"></path>
+                      <path d="M8 7C8 6.44772 8.44772 6 9 6H21C21.5523 6 22 6.44772 22 7C22 7.55228 21.5523 8 21 8H9C8.44772 8 8 7.55228 8 7Z" fill="" class="fill-paragraph dark:fill-white"></path>
+                      <path d="M4 13C4 12.4477 4.44772 12 5 12H21C21.5523 12 22 12.4477 22 13C22 13.5523 21.5523 14 21 14H5C4.44772 14 4 13.5523 4 13Z" fill="" class="fill-paragraph dark:fill-white"></path>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+          
+              <div class="mobile-menu max-lg:overflow-y-auto">
+                <button class="outline-none navbar-toggle-close w-10 h-10 rounded-full bg-white dark:bg-dark-200 absolute right-6 top-5">
+                  <i class="fa-solid fa-times"></i>
+                </button>
+                <ul class="mobile-nav-menu text-center">
+                  <li>
+                    <a href="#home" onclick="document.querySelector('.navbar-toggle-close').click();" class="nav-link text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors">
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#about" onclick="document.querySelector('.navbar-toggle-close').click();" class="nav-link text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#service" onclick="document.querySelector('.navbar-toggle-close').click();" class="nav-link text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors">
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#trust" onclick="document.querySelector('.navbar-toggle-close').click();" class="nav-link text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors">
+                      Trust
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#faq" onclick="document.querySelector('.navbar-toggle-close').click();" class="nav-link text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors">
+                      Faq
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://docs.sofin.app" class="nav-link text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors">
+                      Docs
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+        </header>
+          
+      
+
+      
+      
+      
+      <section id="home" class="hero analytics-hero bg-white dark:bg-dark-300 overflow-hidden relative max-lg:pt-[160px] max-lg:pb-25 pt-[230px] pb-[140px] max-mb:pb-[70px]" id="scene">
+        
+        <video class="video-background" autoplay muted loop>
+            <source src="https://darker-supply.s3.us-east-005.backblazeb2.com/Flowing+Neon+Curve+Lines_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        <div class="absolute top-0 left-0 w-full h-full max-h-[400px] bg-[linear-gradient(180deg,var(--tw-gradient-stops))] from-[#F3FDD9] from-[-2.27%] to-[#F3FDD9]/10 to{-48.41%} dark:hidden"></div>
+      
+        
+
+      
+
+      
+        <div class="container">
+          <div class="grid grid-cols-12 items-center relative gap-5 z-10 max-lg:gap-y-10" data-aos="fade-up" 
+          data-aos-offset="200" data-aos-duration="1000" data-aos-once="true">
+            <div class="col-span-12 text-center mb-15 lg:mb-20">
+              <p class="max-lg:mb-4 mb-8 font-medium uppercase">50k+ Trusted Businesses</p>
+              <h1 class="mb-12 max-md:mb-8">
+                Presenting the forefront of <br>
+                product analysis.
+              </h1>
+              <p class="mb-12 max-md:mb-8 max-w-[590px] mx-auto">
+                Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It's not Latin, though it
+                looks like it
+              </p>
+              <div class="flex items-center justify-center gap-4  mx-auto">
+                <a href="https://docs.sofin.app" target="_blank" class="btn">
+                  Get Started
+                </a>
+                <a href="https://docs.sofin.app" target="_blank" class="btn-outline">
+                  Get a Demo
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      
+
+      
+      <!-- ANIMATION SECTION  -->
+
+      <section id="about" class="bg-white dark:bg-dark-300  pb-48 max-md:pb-20" style="padding-top: 40px;">
+
+        <div class="container relative z-10">
+          <div class="text-center max-w-[620px] mx-auto">
+            <p class="section-tagline mt-16">Top Integration</p>
+      
+            <h2 class="mb-8">Make productivity easier with 50+ Integrations</h2>
+            <p class="mb-10">
+              Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It's not Latin though it
+              looks like nothing.
+            </p>
+      
+            <a href="contact.html" class="btn-outline">
+              Start Your Journey
+            </a>
+          </div>
+
+
+          <div class="max-w-[1068px] mx-auto -mt-15 max-md:hidden relative -z-10">
+            <div class="relative max-lg:py-25 max-xl:py-150 py-[175px] w-full z-10">
+
+              <div class="relative flex flex-row align-center justify-center mx-auto w-150 h-150 rounded-full bg-white dark:bg-dark-200 shadow-nav">
+                <div class="flex flex-row align-center justify-center mx-auto absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2  w-[122px] h-[122px] rounded-full bg-primary-100 dark:bg-[#2B2D2A]">
+                  <span class="inline-block text-primary text-[30px] font-semibold py-[46px] px-[25px] leading-none">
+                    aplio
+                  </span>
+                </div>
+              </div>
+
+              <div class="w-1/2 h-full block absolute top-0 left-0 bottom-auto right-auto">
+                
+                <div class="bg-white dark:bg-dark-200 shadow-box  p-2.5 w-25 xl:w-[120px] aspect-square rounded-full absolute top-0 left-0 right-auto bottom-auto" style="margin-left: 30px;margin-top: 24px;">
+                  <div class="flex items-center justify-center border border-dashed  border-gray-100 dark:border-borderColour-dark text-center aspect-square rounded-full 1xl:p-2.5">
+                    <img src="images/twitter.svg" alt="value image" class="inline-block">
+                  </div>
+                </div>
+
+                <div class="w-auto leading-0 absolute max-lg:top-5 max-xl:top-[42px] top-[58px] bottom-auto left-25 right-auto -z-10">
+                  <svg width="100%" height="193" viewbox="0 0 437 193" fill="none" xmlns="http://www.w3.org/2000/svg" class="overflow-visible">
+                    <path id="path" d="M0 1H122.022C130.298 1 137.01 7.70248 137.022 15.9782L137.175 122.029C137.187 130.302 143.895 137.003 152.168 137.007L275.007 137.066C283.289 137.07 290 143.785 290 152.066V177C290 185.284 296.716 192 305 192H437" stroke="#DCE0D3" stroke-dasharray="5 3"></path>
+                    <g id="rect" data-svg-origin="25.5 25.5" transform="matrix(1,0,0,1,255.40852,119.431)">
+                      <g filter="url(#filter0_f_283_246)">
+                        <circle cx="25.5" cy="25.5" r="7.5" fill="" class="fill-primary"></circle>
+                      </g>
+                      <g filter="url(#filter1_f_283_246)">
+                        <circle cx="25.5" cy="25.5" r="5.5" fill="" class="fill-primary"></circle>
+                      </g>
+                    </g>
+                    <defs>
+                      <filter id="filter0_f_283_246" x="0" y="0" width="51" height="51" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                        <fegaussianblur stddeviation="9" result="effect1_foregroundBlur_283_246"></fegaussianblur>
+                      </filter>
+                      <filter id="filter1_f_283_246" x="13" y="13" width="25" height="25" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                        <fegaussianblur stddeviation="3.5" result="effect1_foregroundBlur_283_246"></fegaussianblur>
+                      </filter>
+                    </defs>
+                    
+                  </svg>
+                </div>
+      
+                <div class="bg-white dark:bg-dark-200 shadow-box  p-2.5 w-25 xl:w-[120px] aspect-square rounded-full absolute top-1/2 -translate-y-1/2 left-10 bottom-auto right-auto">
+                  <div class="flex items-center justify-center border border-dashed  border-gray-100 dark:border-borderColour-dark text-center aspect-square rounded-full 1xl:p-2.5">
+                    <img src="images/snapchat.svg" alt="value image" class="inline-block">
+                  </div>
+                </div>
+                
+                <div class="w-auto leading-0 absolute top-1/2 -translate-y-1/2 bottom-auto left-25 right-auto  -z-10">
+                  <svg width="100%" height="2" viewbox="0 0 373 2" fill="none" xmlns="http://www.w3.org/2000/svg" class="overflow-visible">
+                    
+                    <path id="path-2" d="M0 1H373" stroke="#DCE0D3" stroke-dasharray="5 3"></path>
+                    <g id="rect-2" data-svg-origin="25.5 25.5" transform="matrix(1,0,0,1,255.40852,119.431)">
+                      <g filter="url(#filter0_f_283_246)">
+                        <circle cx="25.5" cy="25.5" r="7.5" fill="" class="fill-primary"></circle>
+                      </g>
+                      <g filter="url(#filter1_f_283_246)">
+                        <circle cx="25.5" cy="25.5" r="5.5" fill="" class="fill-primary"></circle>
+                      </g>
+                    </g>
+                    <defs>
+                      <filter id="filter0_f_283_246" x="0" y="0" width="51" height="51" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                        <fegaussianblur stddeviation="9" result="effect1_foregroundBlur_283_246"></fegaussianblur>
+                      </filter>
+                      <filter id="filter1_f_283_246" x="13" y="13" width="25" height="25" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                        <fegaussianblur stddeviation="3.5" result="effect1_foregroundBlur_283_246"></fegaussianblur>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+      
+                <div class="bg-white dark:bg-dark-200 shadow-box  p-2.5 w-25 xl:w-[120px] aspect-square rounded-full absolute top-auto left-0 bottom-0 right-auto" style="margin-bottom: 24px; margin-left: 34px;">
+                  <div class="flex items-center justify-center border border-dashed  border-gray-100 dark:border-borderColour-dark text-center aspect-square rounded-full 1xl:p-2.5">
+                    <img src="images/dropbox.svg" alt="value image" class="inline-block">
+                  </div>
+                </div>
+                <div class="w-auto leading-0 absolute top-auto -translate-y-1/2 max-lg:-bottom-[76px] max-xl:-bottom-[54px] -bottom-[38px] left-25 right-auto  -z-10">
+                  <svg width="100%" height="193" viewbox="0 0 437 193" fill="none" xmlns="http://www.w3.org/2000/svg" class="overflow-visible">
+                    <path id="path-3" d="M0 192H122.022C130.298 192 137.01 185.298 137.022 177.022L137.175 70.971C137.187 62.6981 143.906 55.9968 152.179 55.9928C198.05 55.9707 229.13 55.9557 274.996 55.9336C283.278 55.9296 290 49.215 290 40.9336V16C290 7.7157 296.716 0.999985 305 0.999985H437" stroke="#DCE0D3" stroke-dasharray="5 3"></path>
+                    <g id="rect-3" data-svg-origin="25.5 25.5" transform="matrix(1,0,0,1,255.40852,119.431)">
+                      <g filter="url(#filter0_f_283_246)">
+                        <circle cx="25.5" cy="25.5" r="7.5" fill="" class="fill-primary"></circle>
+                      </g>
+                      <g filter="url(#filter1_f_283_246)">
+                        <circle cx="25.5" cy="25.5" r="5.5" fill="" class="fill-primary"></circle>
+                      </g>
+                    </g>
+                    <defs>
+                      <filter id="filter0_f_283_246" x="0" y="0" width="51" height="51" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                        <fegaussianblur stddeviation="9" result="effect1_foregroundBlur_283_246"></fegaussianblur>
+                      </filter>
+                      <filter id="filter1_f_283_246" x="13" y="13" width="25" height="25" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                        <fegaussianblur stddeviation="3.5" result="effect1_foregroundBlur_283_246"></fegaussianblur>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="w-1/2 h-full block absolute top-0 left-auto bottom-auto right-0">
+                <div class="bg-white dark:bg-dark-200 shadow-box  p-2.5 w-25 xl:w-[120px] aspect-square rounded-full absolute top-0 left-auto right-0 bottom-auto" style="margin-right: 30px;margin-top:19px;">
+                  <div class="flex items-center justify-center border border-dashed  border-gray-100 dark:border-borderColour-dark text-center aspect-square rounded-full 1xl:p-2.5">
+                    <img src="images/slack.svg" alt="value image" class="inline-block">
+                  </div>
+                </div>
+                <div class="w-auto leading-0 absolute max-lg:top-5 max-xl:top-[42px] top-[58px] bottom-auto right-25 left-auto -z-10">
+                  <svg width="100%" height="193" viewbox="0 0 437 193" fill="none" xmlns="http://www.w3.org/2000/svg" class="overflow-visible">
+                    <path id="path-4" d="M437 1H314.978C306.702 1 299.99 7.70248 299.978 15.9782L299.825 122.029C299.813 130.302 293.105 137.003 284.832 137.007L161.993 137.066C153.711 137.07 147 143.785 147 152.066V177C147 185.284 140.284 192 132 192H0" stroke="#DCE0D3" stroke-dasharray="5 3"></path>
+                    <g id="rect-4" data-svg-origin="25.5 25.5" transform="matrix(1,0,0,1,255.40852,119.431)">
+                      <g filter="url(#filter0_f_283_246)">
+                        <circle cx="25.5" cy="25.5" r="7.5" fill="" class="fill-primary"></circle>
+                      </g>
+                      <g filter="url(#filter1_f_283_246)">
+                        <circle cx="25.5" cy="25.5" r="5.5" fill="" class="fill-primary"></circle>
+                      </g>
+                    </g>
+                    <defs>
+                      <filter id="filter0_f_283_246" x="0" y="0" width="51" height="51" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                        <fegaussianblur stddeviation="9" result="effect1_foregroundBlur_283_246"></fegaussianblur>
+                      </filter>
+                      <filter id="filter1_f_283_246" x="13" y="13" width="25" height="25" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                        <fegaussianblur stddeviation="3.5" result="effect1_foregroundBlur_283_246"></fegaussianblur>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+      
+                <div class="bg-white dark:bg-dark-200 shadow-box  p-2.5 w-25 xl:w-[120px] aspect-square rounded-full absolute top-1/2 -translate-y-1/2 left-auto bottom-auto right-10">
+                  <div class="flex items-center justify-center border border-dashed  border-gray-100 dark:border-borderColour-dark text-center aspect-square rounded-full 1xl:p-2.5">
+                    <img src="images/asana.svg" alt="value image" class="inline-block">
+                  </div>
+                </div>
+                <div class="w-auto leading-0 absolute top-1/2 -translate-y-1/2 bottom-auto right-25 left-auto -z-10">
+                  <svg width="100%" height="2" viewbox="0 0 373 2" fill="none" xmlns="http://www.w3.org/2000/svg" class="overflow-visible">
+                    <path id="path-5" d="M373 1H0" stroke="#DCE0D3" stroke-dasharray="5 3"></path>
+                    <g id="rect-5" data-svg-origin="25.5 25.5" transform="matrix(1,0,0,1,255.40852,119.431)">
+                      <g filter="url(#filter0_f_283_246)">
+                        <circle cx="25.5" cy="25.5" r="7.5" fill="" class="fill-primary"></circle>
+                      </g>
+                      <g filter="url(#filter1_f_283_246)">
+                        <circle cx="25.5" cy="25.5" r="5.5" fill="" class="fill-primary"></circle>
+                      </g>
+                    </g>
+                    <defs>
+                      <filter id="filter0_f_283_246" x="0" y="0" width="51" height="51" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                        <fegaussianblur stddeviation="9" result="effect1_foregroundBlur_283_246"></fegaussianblur>
+                      </filter>
+                      <filter id="filter1_f_283_246" x="13" y="13" width="25" height="25" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                        <fegaussianblur stddeviation="3.5" result="effect1_foregroundBlur_283_246"></fegaussianblur>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+      
+                <div class="bg-white dark:bg-dark-200 shadow-box  p-2.5 w-25 xl:w-[120px] aspect-square rounded-full absolute top-auto left-auto bottom-0 right-0" style="margin-bottom:25px;margin-right: 34px;">
+                  <div class="flex items-center justify-center border border-dashed  border-gray-100 dark:border-borderColour-dark text-center aspect-square rounded-full 1xl:p-2.5">
+                    <img src="images/google-drive.svg" alt="value image" class="inline-block">
+                  </div>
+                </div>
+                
+                <div class="w-auto leading-0 absolute top-auto -translate-y-1/2 max-lg:-bottom-[76px] max-xl:-bottom-[54px] -bottom-[38px] left-auto right-25 -z-10">
+
+                  <svg width="100%" height="193" viewbox="0 0 437 193" fill="none" xmlns="http://www.w3.org/2000/svg" class="overflow-visible">
+                    <path id="path-6" d="M437 192H314.978C306.702 192 299.99 185.298 299.978 177.022L299.825 70.971C299.813 62.6981 293.105 55.9968 284.832 55.9928L161.993 55.9336C153.711 55.9296 147 49.215 147 40.9336V16C147 7.7157 140.284 0.999985 132 0.999985H0" stroke="#DCE0D3" stroke-dasharray="5 3"></path>
+                    <g id="rect-6" data-svg-origin="25.5 25.5" transform="matrix(1,0,0,1,255.40852,119.431)">
+                      <g filter="url(#filter0_f_283_246)">
+                        <circle cx="25.5" cy="25.5" r="7.5" fill="" class="fill-primary"></circle>
+                      </g>
+                      <g filter="url(#filter1_f_283_246)">
+                        <circle cx="25.5" cy="25.5" r="5.5" fill="" class="fill-primary"></circle>
+                      </g>
+                    </g>
+                    <defs>
+                      <filter id="filter0_f_283_246" x="0" y="0" width="51" height="51" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                        <fegaussianblur stddeviation="9" result="effect1_foregroundBlur_283_246"></fegaussianblur>
+                      </filter>
+                      <filter id="filter1_f_283_246" x="13" y="13" width="25" height="25" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                        <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                        <fegaussianblur stddeviation="3.5" result="effect1_foregroundBlur_283_246"></fegaussianblur>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class=" grid grid-cols-2 gap-8 md:hidden mt-10">
+            <div class="bg-white dark:bg-dark-200 shadow-box  p-2.5 w-25 aspect-square rounded-full mx-auto">
+              <div class="flex items-center justify-center border border-dashed  border-gray-100 dark:border-borderColour-dark text-center aspect-square rounded-full ">
+                <img src="images/figma.svg" alt="value image" class="inline-block">
+              </div>
+            </div>
+      
+            <div class="bg-white dark:bg-dark-200 shadow-box  p-2.5 w-25 aspect-square rounded-full mx-auto">
+              <div class="flex items-center justify-center border border-dashed  border-gray-100 dark:border-borderColour-dark text-center aspect-square rounded-full ">
+                <img src="images/dropbox.svg" alt="value image" class="inline-block">
+              </div>
+            </div>
+      
+            <div class="bg-white dark:bg-dark-200 shadow-box  p-2.5 w-25 aspect-square rounded-full mx-auto">
+              <div class="flex items-center justify-center border border-dashed  border-gray-100 dark:border-borderColour-dark text-center aspect-square rounded-full ">
+                <img src="images/twitter.svg" alt="value image" class="inline-block">
+              </div>
+            </div>
+            <div class="bg-white dark:bg-dark-200 shadow-box  p-2.5 w-25 aspect-square rounded-full mx-auto">
+              <div class="flex items-center justify-center border border-dashed  border-gray-100 dark:border-borderColour-dark text-center aspect-square rounded-full ">
+                <img src="images/slack.svg" alt="value image" class="inline-block">
+              </div>
+            </div>
+            <div class="bg-white dark:bg-dark-200 shadow-box  p-2.5 w-25 aspect-square rounded-full mx-auto">
+              <div class="flex items-center justify-center border border-dashed  border-gray-100 dark:border-borderColour-dark text-center aspect-square rounded-full ">
+                <img src="images/google-drive.svg" alt="value image" class="inline-block">
+              </div>
+            </div>
+            <div class="bg-white dark:bg-dark-200 shadow-box  p-2.5 w-25 aspect-square rounded-full mx-auto">
+              <div class="flex items-center justify-center border border-dashed  border-gray-100 dark:border-borderColour-dark text-center aspect-square rounded-full ">
+                <img src="images/asana.svg" alt="value image" class="inline-block">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+     <!-- ANIMATION SECTION  END -->
+
+
+      <!-- Services Section  -->
+     
+
+      <section id="service"  class="bg-white dark:bg-dark-300 pb-[130px]  relative sm:overflow-hidden" style="margin-top:100px">
+        <div class="absolute left-0 right-0 top-25 bg-[url('../images/service-bg.png')] bg-no-repeat bg-cover bg-center opacity-70 w-full h-full  sm:hidden"></div>
+        <div class="container " style="margin-top: 81px">
+          <div class="mb-12">
+            <div class=" text-center max-w-[550px] px-[10px] mx-auto max-lg:px-2.5">
+                <h2 class="mb-10">The world's best companies trust aplio.</h2>
+                <p class="text-light mb-15">Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It's not Latin, though it looks like it</p>
+              </div>
+          </div>
+      
+          <div class="relative z-10">
+            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex -z-10 max-sm:hidden">
+              <div class="w-[330px] h-[330px] xl:w-[442px] xl:h-[442px] blur-[145px] rounded-full bg-primary-200/20 "></div>
+              <div class="w-[330px] h-[330px] xl:w-[442px] xl:h-[442px] blur-[145px] rounded-full bg-primary-200/25 lg:-ml-[170px]"></div>
+              <div class="w-[330px] h-[330px] xl:w-[442px] xl:h-[442px] blur-[145px] rounded-full bg-primary-200/20 lg-ml-[170px]"></div>
+            </div>
+      
+            <div class="grid grid-cols-3  max-sm:grid-cols-1 max-lg:grid-cols-2 gap-8">
+              <div class="bg-white dark:bg-dark-200 rounded-medium p-2.5 shadow-nav relative scale-100 hover:scale-105 transition-transform duration-500 hover:transition-transform hover:duration-500">
+                <div class="border border-dashed rounded border-gray-100 dark:border-borderColour-dark max-lg:p-5 p-10 ">
+                  <img src="images/services/investment.svg" alt="service logo" class="inline-block dark:hidden mb-6">
+                  <img src="images/services/investment-dark.svg" alt="service logo" class="hidden dark:inline-block mb-6">
+                  <a href="services-single.html" class="block">
+                    <h3 class="mb-2.5">Investment Banks</h3>
+                  </a>
+                  <p class="mb-6">Until recently, the prevailing view asumed lorem ipsum was born as nonsense text.</p>
+                  <a href="services-single.html" class="btn-outline btn-sm">
+                    Read More
+                  </a>
+                </div>
+              </div>
+      
+              <div class="bg-white dark:bg-dark-200 rounded-medium p-2.5 shadow-nav relative  scale-100 hover:scale-105 transition-transform duration-500 hover:transition-transform hover:duration-500">
+                <div class="border border-dashed rounded border-gray-100 dark:border-borderColour-dark p-10 h-full max-lg:p-5">
+                  <img src="images/services/sales.svg" alt="service logo" class="inline-block dark:hidden mb-6">
+                  <img src="images/services/sales-dark.svg" alt="service logo" class="hidden dark:inline-block mb-6">
+                  <a href="services-single.html" class="block">
+                    <h3 class="mb-2.5">Sales & Trading</h3>
+                  </a>
+                  <p class="mb-6">Until recently, the prevailing view asumed lorem ipsum was born as nonsense text.</p>
+                  <a href="services-single.html" class="btn-outline btn-sm">
+                    Read More
+                  </a>
+                </div>
+              </div>
+      
+              <div class="bg-white dark:bg-dark-200 rounded-medium p-2.5 shadow-nav relative  scale-100 hover:scale-105 transition-transform duration-500 hover:transition-transform hover:duration-500">
+                <div class="border border-dashed rounded border-gray-100 dark:border-borderColour-dark p-10 h-full max-lg:p-5">
+                  <img src="images/services/loan.svg" alt="service logo" class="inline-block dark:hidden mb-6">
+                  <img src="images/services/loan-dark.svg" alt="service logo" class="hidden dark:inline-block mb-6">
+                  <a href="services-single.html" class="block">
+                    <h3 class="mb-2.5">Mortgage Loans</h3>
+                  </a>
+                  <p class="mb-6">Until recently, the prevailing view asumed lorem ipsum was born as nonsense text.</p>
+                  <a href="services-single.html" class="btn-outline btn-sm">Read More</a>
+                </div>
+              </div>
+      
+              <div class="bg-white dark:bg-dark-200 rounded-medium p-2.5 shadow-nav relative  scale-100 hover:scale-105 transition-transform duration-500 hover:transition-transform hover:duration-500">
+                <div class="border border-dashed rounded border-gray-100 dark:border-borderColour-dark p-10 h-full max-lg:p-5">
+                  <img src="images/services/finance.svg" alt="service logo" class="inline-block dark:hidden mb-6">
+                  <img src="images/services/finance-dark.svg" alt="service logo" class="hidden dark:inline-block mb-6">
+                  <a href="services-single.html" class="block">
+                    <h3 class="mb-2.5">Finance Analysis</h3>
+                  </a>
+                  <p class="mb-6">Until recently, the prevailing view asumed lorem ipsum was born as nonsense text.</p>
+                  <a href="services-single.html" class="btn-outline btn-sm">Read More</a>
+                </div>
+              </div>
+      
+              <div class="bg-white dark:bg-dark-200 rounded-medium p-2.5 shadow-nav relative  scale-100 hover:scale-105 transition-transform duration-500 hover:transition-transform hover:duration-500">
+                <div class="border border-dashed rounded border-gray-100 dark:border-borderColour-dark p-10 h-full max-lg:p-5">
+                  <img src="images/services/effeciency.svg" alt="service logo" class="inline-block dark:hidden mb-6">
+                  <img src="images/services/effeciency-dark.svg" alt="service logo" class="hidden dark:inline-block mb-6">
+                  <a href="services-single.html" class="block">
+                    <h3 class="mb-2.5">Increased Efficiency</h3>
+                  </a>
+                  <p class="mb-6">Until recently, the prevailing view asumed lorem ipsum was born as nonsense text.</p>
+                  <a href="services-single.html" class="btn-outline btn-sm">Read More</a>
+                </div>
+              </div>
+      
+              <div class="bg-white dark:bg-dark-200 rounded-medium p-2.5 shadow-nav relative  scale-100 hover:scale-105 transition-transform duration-500 hover:transition-transform hover:duration-500">
+                <div class="border border-dashed rounded border-gray-100 dark:border-borderColour-dark p-10 h-full max-lg:p-5">
+                  <img src="images/services/fund.svg" alt="service logo" class="inline-block dark:hidden mb-6">
+                  <img src="images/services/fund-dark.svg" alt="service logo" class="hidden dark:inline-block mb-6">
+                  <a href="services-single.html" class="block">
+                    <h3 class="mb-2.5">Fundraising Advice</h3>
+                  </a>
+                  <p class="mb-6">Until recently, the prevailing view asumed lorem ipsum was born as nonsense text.</p>
+                  <a href="services-single.html" class="btn-outline btn-sm">
+                    Read More
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+   
+
+
+      <!-- TRUESTED COMOPANY -->
+
+      
+   <section id="trust" class="client pt-[100px] pb-[145px] max-lg:py-20" style="padding-top:93px;">
+    <div class="container  overflow-hidden max-lg:!px-0">
+      <div class=" text-center max-w-[550px] px-[10px] mx-auto max-lg:px-2.5">
+        <h2 class="mb-10">The world's best companies trust aplio.</h2>
+        <p class="text-light mb-15">Trusted by thousands of companies across 50+ countries</p>
+      </div>
+      <div class="relative after:absolute before:absolute after:w-[120px] after:h-[40px] after:bg-gradient-to-r after:from-white after:from-[37.5%]  after:top-1/2 after:-translate-y-1/2 after:-left-0.5 after:z-10 before:w-[120px] before:h-[40px] before:bg-gradient-to-l before:from-white before:from-[37.5%] before:-right-0.5  before:top-1/2 before:-translate-y-1/2  before:z-10 dark:after:from-dark-gradient dark:before:from-dark-gradient">
+        <div class="absolute left-0 top-0 w-full  max-lg:hidden">
+          <img src="images/clients/client-border.svg" alt="border" class="inline-block dark:hidden">
+          <img src="images/clients/client-border-dark.svg" alt="border" class="hidden dark:inline-block">
+        </div>
+        <div class="marquee marquee-items">
+          <div class="marquee-content flex items-center justify-between py-8 " id="clients">
+            <div class="marquee-content-list">
+              <img src="images/clients/group.svg" alt="group" class="inline-block dark:hidden">
+              <img src="images/clients/group-dark.svg" alt="group" class="hidden dark:inline-block">
+            </div>
+            <div class="marquee-content-list ">
+              <img src="images/clients/infinity.svg" alt="infinity" class="inline-block dark:hidden">
+              <img src="images/clients/infinity-dark.svg" alt="infinity" class="hidden dark:inline-block">
+            </div>
+            <div class="marquee-content-list ">
+              <img src="images/clients/artifact.svg" alt="artifact" class="inline-block dark:hidden">
+              <img src="images/clients/artifact-dark.svg" alt="caudile" class="hidden dark:inline-block">
+            </div>
+            <div class="marquee-content-list ">
+              <img src="images/clients/caudile.svg" alt="caudile" class="inline-block dark:hidden">
+              <img src="images/clients/caudile-dark.svg" alt="caudile" class="hidden dark:inline-block">
+            </div>
+            <div class="marquee-content-list ">
+              <img src="images/clients/axeptio.svg" alt="axeptio" class="inline-block dark:hidden">
+              <img src="images/clients/axeptio-dark.svg" alt="axeptio" class="hidden dark:inline-block">
+            </div>
+            <div class="marquee-content-list ">
+              <img src="images/clients/mfinity.svg" alt="mfinity" class="inline-block dark:hidden">
+              <img src="images/clients/mfinity-dark.svg" alt="mfinity" class="hidden dark:inline-block">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="mt-15 flex items-center justify-center ">
+        <a href="contact.html" class="btn-outline">
+          Start your Journey
+        </a>
+      </div>
+    </div>
+  </section>
+
+      
+      <!-- TRUESTED COMOPANY END -->
+
+      <!-- Another Section is here -->
+
+      <section class="relative z-10" style="margin-bottom: 150px;">
+        <div class="container">
+          <div class=" bg-white dark:bg-dark-200 rounded-medium p-2.5 max-w-[850px] mx-auto shadow-nav">
+            <div class=" bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark py-10 grid grid-cols-3 max-md:grid-cols-1  max-md:gap-y-10 items-center  [&>*:not(:last-child)]:after:absolute  md:[&>*:not(:last-child)]:after:right-0 md:[&>*:not(:last-child)]:after:w-[1px] md:[&>*:not(:last-child)]:after:h-[60px] md:[&>*:not(:last-child)]:after:content-[url('../images/clients/client-item-border.svg')] md:[&>*:not(:last-child)]:after:top-1/2 md:[&>*:not(:last-child)]:after:-translate-y-1/2 md:dark:[&>*:not(:last-child)]:after:content-[url('../images/clients/client-item-border-dark.svg')]  max-md:[&>*:not(:last-child)]:after:h-[1px] max-md:[&>*:not(:last-child)]:after:w-[270px] max-md:[&>*:not(:last-child)]:after:-bottom-5 max-md:[&>*:not(:last-child)]:after:left-1/2 max-md:[&>*:not(:last-child)]:after:-translate-x-1/2  max-md:[&>*:not(:last-child)]:after:content-[url('../images/clients/client-item-border-mobile.svg')] max-md:dark:[&>*:not(:last-child)]:after:content-[url('../images/clients/client-item-border-mobile-dark.svg')] " id="counter">
+              <div class="flex flex-col items-center justify-center relative">
+                <h2 class="text-[48px]">
+                  <span class="counter" data-value="60">
+                  </span><span class="percent">%</span>
+                </h2>
+                <p class="font-jakarta_sans text-light">Project Completed</p>
+              </div>
+              <div class="flex flex-col items-center justify-center relative">
+                <h2 class="text-[48px]">
+                  <span class="counter" data-value="30">
+                  </span><span class="percent">+</span>
+                </h2>
+                <p class="font-jakarta_sans text-light">Team Members</p>
+              </div>
+              <div class="flex flex-col items-center justify-center relative">
+                <h2 class="text-[48px]">
+                  <span class="counter" data-value="40">
+                  </span><span class="percent">K</span>
+                </h2>
+                <p class="font-jakarta_sans text-light">Satisfied Clients</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    
+      <!-- FAQ SECTION  -->
+      <section id="faq" class="hero  overflow-hidden relative max-lg:pt-150 pt-[240px] pb-[60px]" style="padding-top: 80px;">
+        <div class="container">
+          <div
+            class="max-w-[948px] mx-auto text-center"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            <p class="mb-4 font-medium uppercase">Faq’s</p>
+            <h1 class="max-lg:mb-10 mb-10">Frequently asked <br>  question</h1>
+            <p class="max-lg:mb-10 mb-12 max-w-[590px] mx-auto">Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It's not Latin, though it looks like it</p>
+          </div>
+        </div>
+      </section>
+
+      <section  class=" pb-120 max-md:overflow-hidden">
+        <div class="container relative z-10">
+          <div class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 flex max-md:flex-col -z-10 max-md:hidden">
+            <div
+              class="max-1xl:w-[335px] max-1xl:h-[335px]  1xl:w-[442px] 1xl:h-[442px]  rounded-full bg-primary-200/20 blur-[145px]"
+            ></div>
+            <div
+              class="max-1xl:w-[335px] max-1xl:h-[335px]  1xl:w-[442px] 1xl:h-[442px]  rounded-full bg-primary-200/25 -ml-[170px] max-md:ml-0 blur-[145px]"
+            ></div>
+            <div
+              class="max-1xl:w-[335px] max-1xl:h-[335px]  1xl:w-[442px] 1xl:h-[442px]  rounded-full bg-primary-200/20 -ml-[170px] max-md:ml-0 blur-[145px]"
+            ></div>
+          </div>
+          <div
+            class="absolute left-1/2  p-[350px] -translate-x-1/2 bg-cover w-full h-full  bg-[url('../images/hero-gradient.png')] bg-no-repeat bg-center opacity-70 md:hidden -z-10"
+          ></div>
+          <div
+            class="  max-w-[850px] mx-auto"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            <ul
+              class=" faq-tabs flex max-md:flex-col max-w-[530px] mx-auto items-center mb-15 border-b-2 border-white dark:border-borderColour-dark max-md:border-none"
+            >
+              <li class="group tabActive">
+                <a
+                  class=" py-4 px-7 text-center text-xl font-medium relative after:absolute after:h-0.5 after:w-full after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:origin-right after:scale-x-0 after:bg-paragraph dark:after:bg-white  after:transition-transform after:duration-500 group-[.tabActive]:after:origin-left group-[.tabActive]:after:scale-x-100 -mb-0.5"
+                  href="#faq-1"
+                >
+                  General
+                </a>
+              </li>
+              <li class="group ">
+                <a
+                  class=" py-4 px-7 text-center text-xl font-medium relative after:absolute after:h-0.5 after:w-full after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:origin-right after:scale-x-0 after:bg-paragraph dark:after:bg-white  after:transition-transform after:duration-500 group-[.tabActive]:after:origin-left group-[.tabActive]:after:scale-x-100 -mb-0.5"
+                  href="#faq-2"
+                >
+                  Changelog
+                </a>
+              </li>
+              <li class="group ">
+                <a
+                  class=" py-4 px-7 text-center text-xl font-medium relative after:absolute after:h-0.5 after:w-full after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:origin-right after:scale-x-0 after:bg-paragraph dark:after:bg-white  after:transition-transform after:duration-500 group-[.tabActive]:after:origin-left group-[.tabActive]:after:scale-x-100 -mb-0.5"
+                  href="#faq-3"
+                >
+                  Terms & Condition
+                </a>
+              </li>
+            </ul>
+      
+            <div class="tab-content">
+              <div
+                class="tab-pane tabActive"
+                id="faq-1"
+              >
+                <div class="[&>*:not(:last-child)]:mb-5">
+                  <div class="faq-item bg-white dark:bg-dark-200 p-2.5 rounded-medium">
+                    <div
+                      class="faq-header flex items-center py-3 px-5 bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark  cursor-pointer"
+                    >
+                      <h3 class="text-xl font-semibold">Q. What is a business agency?</h3>
+                      <span class="shrink-0 ml-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class="plus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class=" minus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="faq-body close">
+                      <div class="text-paragraph-light pt-6 px-6 pb-3.5 dark:text-[#A1A49D]">
+                        Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item bg-white dark:bg-dark-200 p-2.5 rounded-medium">
+                    <div
+                      class="faq-header flex items-center py-3 px-5 bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark cursor-pointer"
+                    >
+                      <h3 class="text-xl font-semibold">Q. What services does a business agency provide?</h3>
+                      <span class="shrink-0 ml-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class="plus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class=" minus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="faq-body close ">
+                      <div class="text-paragraph-light pt-6 px-6 pb-3.5 dark:text-[#A1A49D]">
+                        Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item bg-white dark:bg-dark-200 p-2.5 rounded-medium">
+                    <div
+                      class="faq-header flex items-center py-3 px-5 bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark cursor-pointer"
+                    >
+                      <h3 class="text-xl font-semibold">Q. How often should I update my website?</h3>
+                      <span class="shrink-0 ml-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class="plus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class=" minus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="faq-body close ">
+                      <div class="text-paragraph-light pt-6 px-6 pb-3.5 dark:text-[#A1A49D]">
+                        Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item bg-white dark:bg-dark-200 p-2.5 rounded-medium">
+                    <div
+                      class="faq-header py-3 px-5 flex items-center bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark cursor-pointer"
+                    >
+                      <h3 class="text-xl font-semibold">Q. How do subscriptions work?</h3>
+                      <span class="shrink-0 ml-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class="plus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class=" minus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="faq-body close ">
+                      <div class="text-paragraph-light pt-6 px-6 pb-3.5 dark:text-[#A1A49D]">
+                        Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item bg-white dark:bg-dark-200 p-2.5 rounded-medium">
+                    <div
+                      class="faq-header flex items-center py-3 px-5  bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark cursor-pointer"
+                    >
+                      <h3 class="text-xl font-semibold ">Q. What other services are you compatible with?</h3>
+                      <span class="shrink-0 ml-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class="plus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class=" minus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="faq-body close ">
+                      <div class="text-paragraph-light pt-6 px-6 pb-3.5 dark:text-[#A1A49D]">
+                        Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane"
+                id="faq-2"
+              >
+                <div class="[&>*:not(:last-child)]:mb-5">
+                  <div class="faq-item bg-white dark:bg-dark-200 p-2.5 rounded-medium">
+                    <div
+                      class="faq-header flex items-center py-3 px-5 bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark  cursor-pointer"
+                    >
+                      <h3 class="text-xl font-semibold">Q. What is a Changelog?</h3>
+                      <span class="shrink-0 ml-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class="plus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class=" minus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="faq-body close">
+                      <div class="text-paragraph-light pt-6 px-6 pb-3.5 dark:text-[#A1A49D]">
+                        Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item bg-white dark:bg-dark-200 p-2.5 rounded-medium">
+                    <div
+                      class="faq-header flex items-center py-3 px-5 bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark cursor-pointer"
+                    >
+                      <h3 class="text-xl font-semibold">Q. What services does a business agency provide?</h3>
+                      <span class="shrink-0 ml-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class="plus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class=" minus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="faq-body close ">
+                      <div class="text-paragraph-light pt-6 px-6 pb-3.5 dark:text-[#A1A49D]">
+                        Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item bg-white dark:bg-dark-200 p-2.5 rounded-medium">
+                    <div
+                      class="faq-header flex items-center py-3 px-5 bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark cursor-pointer"
+                    >
+                      <h3 class="text-xl font-semibold">Q. How often should I update my website?</h3>
+                      <span class="shrink-0 ml-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class="plus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class=" minus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="faq-body close ">
+                      <div class="text-paragraph-light pt-6 px-6 pb-3.5 dark:text-[#A1A49D]">
+                        Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item bg-white dark:bg-dark-200 p-2.5 rounded-medium">
+                    <div
+                      class="faq-header py-3 px-5 flex items-center bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark cursor-pointer"
+                    >
+                      <h3 class="text-xl font-semibold">Q. How do subscriptions work?</h3>
+                      <span class="shrink-0 ml-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class="plus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class=" minus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="faq-body close ">
+                      <div class="text-paragraph-light pt-6 px-6 pb-3.5 dark:text-[#A1A49D]">
+                        Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item bg-white dark:bg-dark-200 p-2.5 rounded-medium">
+                    <div
+                      class="faq-header flex items-center py-3 px-5  bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark cursor-pointer"
+                    >
+                      <h3 class="text-xl font-semibold ">Q. What other services are you compatible with?</h3>
+                      <span class="shrink-0 ml-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class="plus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class=" minus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="faq-body close ">
+                      <div class="text-paragraph-light pt-6 px-6 pb-3.5 dark:text-[#A1A49D]">
+                        Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane"
+                id="faq-3"
+              >
+                <div class="[&>*:not(:last-child)]:mb-5">
+                  <div class="faq-item bg-white dark:bg-dark-200 p-2.5 rounded-medium">
+                    <div
+                      class="faq-header flex items-center py-3 px-5 bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark  cursor-pointer"
+                    >
+                      <h3 class="text-xl font-semibold">Q. What is a Terms And Condition ?</h3>
+                      <span class="shrink-0 ml-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class="plus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class=" minus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="faq-body close">
+                      <div class="text-paragraph-light pt-6 px-6 pb-3.5 dark:text-[#A1A49D]">
+                        Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item bg-white dark:bg-dark-200 p-2.5 rounded-medium">
+                    <div
+                      class="faq-header flex items-center py-3 px-5 bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark cursor-pointer"
+                    >
+                      <h3 class="text-xl font-semibold">Q. What services does a business agency provide?</h3>
+                      <span class="shrink-0 ml-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class="plus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class=" minus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="faq-body close ">
+                      <div class="text-paragraph-light pt-6 px-6 pb-3.5 dark:text-[#A1A49D]">
+                        Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item bg-white dark:bg-dark-200 p-2.5 rounded-medium">
+                    <div
+                      class="faq-header flex items-center py-3 px-5 bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark cursor-pointer"
+                    >
+                      <h3 class="text-xl font-semibold">Q. How often should I update my website?</h3>
+                      <span class="shrink-0 ml-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class="plus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class=" minus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="faq-body close ">
+                      <div class="text-paragraph-light pt-6 px-6 pb-3.5 dark:text-[#A1A49D]">
+                        Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item bg-white dark:bg-dark-200 p-2.5 rounded-medium">
+                    <div
+                      class="faq-header py-3 px-5 flex items-center bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark cursor-pointer"
+                    >
+                      <h3 class="text-xl font-semibold">Q. How do subscriptions work?</h3>
+                      <span class="shrink-0 ml-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class="plus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class=" minus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="faq-body close ">
+                      <div class="text-paragraph-light pt-6 px-6 pb-3.5 dark:text-[#A1A49D]">
+                        Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item bg-white dark:bg-dark-200 p-2.5 rounded-medium">
+                    <div
+                      class="faq-header flex items-center py-3 px-5  bg-white dark:bg-dark-200 border border-dashed rounded border-gray-100 dark:border-borderColour-dark cursor-pointer"
+                    >
+                      <h3 class="text-xl font-semibold ">Q. What other services are you compatible with?</h3>
+                      <span class="shrink-0 ml-auto">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class="plus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M10 6.25V13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          class=" minus"
+                        >
+                          <path
+                            d="M6.25 10H13.75M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke=""
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            class="stroke-paragraph dark:stroke-primary"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="faq-body close ">
+                      <div class="text-paragraph-light pt-6 px-6 pb-3.5 dark:text-[#A1A49D]">
+                        Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- FOOTER SECTION  -->
+      <section class="bg-white dark:bg-dark-300 overflow-hidden relative pt-20">
+        <div class="container">
+          <div class="seperator">
+            <img src="images/footer-seperator.svg" alt="footer-seperator" class="dark:hidden w-full object-cover">
+            <img src="images/footer-seperator-dark.svg" alt="footer-seperator" class="hidden dark:block w-full object-cover">
+          </div>
+      
+          <div class="py-10">
+            <!-- Footer Content Wrapper -->
+            <div class="flex flex-col items-center max-lg:text-center">
+              <!-- Footer Bottom Section -->
+              <div class="flex justify-between items-center w-full max-lg:flex-col">
+                <!-- Left Links -->
+                <ul class="flex items-center gap-15">
+                  <li>
+                    <a href="privacy.html" class="relative inline-block overflow-hidden text-base capitalize text-paragraph dark:text-white before:absolute before:bottom-0 before:left-0 before:h-[1px] before:w-full before:origin-right before:scale-x-0 before:bg-paragraph dark:before:bg-white before:transition-transform before:duration-500 before:content-[''] before:hover:origin-left before:hover:scale-x-100">
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="terms.html" class="relative inline-block overflow-hidden text-base capitalize text-paragraph dark:text-white before:absolute before:bottom-0 before:left-0 before:h-[1px] before:w-full before:origin-right before:scale-x-0 before:bg-paragraph dark:before:bg-white before:transition-transform before:duration-500 before:content-[''] before:hover:origin-left before:hover:scale-x-100">
+                      Terms & Conditions
+                    </a>
+                  </li>
+                </ul>
+
+                                <!-- Right Social Icons -->
+                <ul class="flex items-center max-lg:justify-center social-link gap-4">
+                    <li>
+                      <a href="#" class="transiton-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+                          <path d="M26.25 14.0749C26.25 7.26802 20.7655 1.75 14 1.75C7.23451 1.75 1.75 7.26802 1.75 14.0749C1.75 20.2265 6.22962 25.3254 12.0859 26.25V17.6375H8.97559V14.0749H12.0859V11.3595C12.0859 8.27062 13.9148 6.5644 16.7129 6.5644C18.0528 6.5644 19.4551 6.80512 19.4551 6.80512V9.83819H17.9104C16.3888 9.83819 15.9141 10.7883 15.9141 11.764V14.0749H19.3115L18.7684 17.6375H15.9141V26.25C21.7704 25.3254 26.25 20.2265 26.25 14.0749Z" fill="" class="fill-paragraph dark:fill-gray-100 hover:fill-primary dark:hover:fill-primary"></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+                          <path d="M14 1.75C7.23187 1.75 1.75 7.23187 1.75 14C1.75 19.4206 5.25656 23.9991 10.1259 25.6222C10.7384 25.7294 10.9681 25.3619 10.9681 25.0403C10.9681 24.7494 10.9528 23.7847 10.9528 22.7587C7.875 23.3253 7.07875 22.0084 6.83375 21.3194C6.69594 20.9672 6.09875 19.88 5.57812 19.5891C5.14937 19.3594 4.53688 18.7928 5.56281 18.7775C6.5275 18.7622 7.21656 19.6656 7.44625 20.0331C8.54875 21.8859 10.3097 21.3653 11.0141 21.0437C11.1213 20.2475 11.4428 19.7116 11.795 19.4053C9.06938 19.0991 6.22125 18.0425 6.22125 13.3569C6.22125 12.0247 6.69594 10.9222 7.47687 10.0647C7.35437 9.75844 6.92562 8.50281 7.59937 6.81844C7.59937 6.81844 8.62531 6.49687 10.9681 8.07406C11.9481 7.79844 12.9894 7.66062 14.0306 7.66062C15.0719 7.66062 16.1131 7.79844 17.0931 8.07406C19.4359 6.48156 20.4619 6.81844 20.4619 6.81844C21.1356 8.50281 20.7069 9.75844 20.5844 10.0647C21.3653 10.9222 21.84 12.0094 21.84 13.3569C21.84 18.0578 18.9766 19.0991 16.2509 19.4053C16.695 19.7881 17.0778 20.5231 17.0778 21.6716C17.0778 23.31 17.0625 24.6269 17.0625 25.0403C17.0625 25.3619 17.2922 25.7447 17.9047 25.6222C20.3365 24.8012 22.4497 23.2383 23.9468 21.1534C25.4438 19.0685 26.2493 16.5667 26.25 14C26.25 7.23187 20.7681 1.75 14 1.75Z" fill=""></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+                          <path d="M14.0037 2C9.04517 2 4.57804 4.9866 2.6827 9.56221C0.787361 14.1378 1.83395 19.409 5.33745 22.9125C8.84096 26.4161 14.1122 27.4626 18.6878 25.5673C23.2698 23.6783 26.2564 19.2112 26.2564 14.2527C26.2564 7.48819 20.7682 2 14.0037 2ZM10.4427 20.7045H7.76885V12.0893H10.4427V20.7045ZM9.1026 10.9151C8.47082 10.9151 7.90286 10.5386 7.66036 9.95787C7.41786 9.37715 7.54549 8.70708 7.9922 8.26036C8.43253 7.81365 9.1026 7.67964 9.68333 7.91576C10.2641 8.15188 10.647 8.71984 10.6533 9.34524C10.6533 10.2131 9.96412 10.9087 9.1026 10.9151ZM20.4555 20.7045H17.7816V16.5118C17.7816 15.5099 17.7625 14.2336 16.3904 14.2336C15.0184 14.2336 14.7759 15.3184 14.7759 16.4416V20.7045H12.1147V12.0893H14.6801V13.2635H14.7184C15.0758 12.5871 15.9437 11.8724 17.2455 11.8724C19.9513 11.8724 20.4491 13.6528 20.4491 15.9694V20.7045H20.4555Z" fill="#7D807B"></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+                          <path d="M12.0604 11.9583C12.0604 11.0204 11.4224 11.0204 11.4224 11.0204H8.79375V13.0302H11.2565C11.684 13.0302 12.0604 12.8962 12.0604 11.9583Z" fill=""></path>
+                          <path d="M18.1408 13.0302C16.7499 13.0302 16.5521 14.4211 16.5521 14.4211H19.5125C19.5189 14.4211 19.538 13.0302 18.1408 13.0302Z" fill="#7D807B"></path>
+                          <path d="M11.4224 14.4211H8.80013V16.8328H11.1225C11.1608 16.8328 11.2182 16.8328 11.2884 16.8328C11.6648 16.8264 12.373 16.718 12.373 15.6589C12.373 14.4083 11.4224 14.4211 11.4224 14.4211Z" fill="#7D807B"></path>
+                          <path d="M14 1.75C7.24336 1.75 1.75 7.24336 1.75 14C1.75 20.7566 7.24336 26.25 14 26.25C20.7566 26.25 26.25 20.7566 26.25 14C26.25 7.24336 20.7566 1.75 14 1.75ZM16.1693 9.94857H19.8889V11.0587H16.1693V9.94857ZM14.2871 15.7737C14.2871 18.5236 11.4224 18.4342 11.4224 18.4342H6.73294V9.41901H11.4224C12.8516 9.41901 13.9745 10.2102 13.9745 11.818C13.9745 13.4322 12.5964 13.5342 12.5964 13.5342C14.4083 13.5342 14.2871 15.7737 14.2871 15.7737ZM21.2479 15.627H16.5776C16.5776 17.3049 18.1663 17.1965 18.1663 17.1965C19.6656 17.1965 19.6146 16.2267 19.6146 16.2267H21.2033C21.2033 18.8043 18.1152 18.6257 18.1152 18.6257C14.4147 18.6257 14.6508 15.1803 14.6508 15.1803C14.6508 15.1803 14.6444 11.7159 18.1152 11.7159C21.7583 11.7095 21.2479 15.627 21.2479 15.627Z" fill=""></path>
+                        </svg>
+                      </a>
+                    </li>
+                </ul>
+      
+                <!-- Centered Text -->
+                <p class="max-lg:mb-10">@ <span id="date"></span> Aplio. All Rights Reserved</p>
+      
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!---Modal -->
+      <div aria-hidden="false" class="fixed z-[99999999990] hidden inset-0 top-0 items-start justify-center  bg-metal-900 bg-dark-200/25"  role="dialog">
+        <div class="relative w-full p-4 h-auto animate-keep-bounce max-w-xl">
+          <div class="relative bg-white dark:bg-dark-200 shadow-box rounded-medium p-2.5 ">
+            <div class=" border border-dashed rounded border-gray-100 dark:border-borderColour-dark p-10 max-lg:p-5 ">
+              <div class="flex items-center justify-between bg border-b border-dashed border-b-borderColour dark:border-borderColour-dark pb-5">
+                <h3 class="text-paragraph dark:text-white">Search</h3>
+                <button class="text-paragraph dark:text-white" id="ok-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 256 256">
+                    <rect width="256" height="256" fill="none"></rect>
+                    <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"></circle>
+                    <line x1="160" y1="96" x2="96" y2="160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    <line x1="160" y1="160" x2="96" y2="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                  </svg>
+                </button>
+              </div>
+              <form class="mt-5">
+                <div>
+                  <div class="flex">
+                    <div class="relative w-full">
+                      <input class="block w-full focus:outline-none focus:ring-0 text-paragraph-light dark:text-paragraph-light  border-borderColour py-2.5 px-5  border border- rounded-medium bg-transparent  placeholder:text-paragraph dark:placeholder:text-white outline-none focus:border-primary dark:focus:border-primary  duration-300 transition-all" id="#id-10" placeholder="Search Component" type="text" value="">
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <p class="pt-5 font-medium mb-12 hidden"><span>No recent searches</span></p>
+              <div class="pt-5">
+                <h3 class="mb-1">Search Result</h3>
+                <ul class="[&>*:not(:last-child)]:border-dashed [&>*:not(:last-child)]:border-gray-100  dark:[&>*:not(:last-child)]:border-borderColour-dark  [&>*:not(:last-child)]:border-b">
+                  <li class="group ">
+                    <a class="  flex items-center justify-between py-5 font-medium" href="services-single.html">
+                      Investment Banks
+                      <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a href="services-single.html" class="  flex items-center justify-between py-5 font-medium">
+                      Financial Analysis <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a href="services-single.html" class="  flex items-center justify-between py-5 font-medium">
+                      Sales & Trading <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!--
+        #############
+        Footer Area
+        #############
+      -->
+      <!-- Mark up for Script Section-->
+
+      <!-- ACTIVE MENU LOGIC IS HERE -->
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const sections = document.querySelectorAll('section');
+          const navLinks = document.querySelectorAll('.nav-list a');
+      
+          function setActiveLink() {
+            let index = sections.length;
+      
+            while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+      
+            navLinks.forEach((link) => link.classList.remove('active'));
+            if (index >= 0) {
+              navLinks[index].classList.add('active');
+            }
+          }
+      
+          window.addEventListener('scroll', setActiveLink);
+      
+          navLinks.forEach((link) => {
+            link.addEventListener('click', function (e) {
+              if (this.getAttribute('href') === '#') {
+              if (this.getAttribute('href') === 'https://docs.sofin.app') {
+                e.preventDefault(); // Prevent default anchor behavior
+                window.location.href = 'https://docs.sofin.app';
+
+               
+              } else {
+                e.preventDefault(); // Prevent default anchor behavior
+      
+                // Remove active class from all links
+                navLinks.forEach((link) => link.classList.remove('active'));
+                // Add active class to the clicked link
+                this.classList.add('active');
+              // Remove active class from all links
+              navLinks.forEach((link) => link.classList.remove('active'));
+              // Add active class to the clicked link
+              this.classList.add('active');
+      
+                // Smooth scroll to the target section
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+              
+      
+                // Set a timeout to update the active link after the scrolling is complete
+                setTimeout(() => {
+                  setActiveLink();
+                }, 100); // Adjust the timeout duration if needed
+              }
+              // Set a timeout to update the active link after the scrolling is complete
+            });
+          });
+      
+          // Optionally, you can call this function on page load to set the initial active link
+          setActiveLink();
+        });
+      </script>
+      
+      
+    <!-- ACTIVE MENU LOGIC IS HERE END -->
+
+      
+      
+      <script src="vendor/fancybox/fancybox.js"></script>
+      <script src="vendor/gsap/gsap.min.js"></script>
+      <script src="vendor/gsap/motionpath.js"></script>
+      <script src="vendor/swiper/swiper.js"></script>
+      <script src="vendor/aos/aos.js"></script>
+      <script src="js/script.js"></script>
+      </body>
+</html>
