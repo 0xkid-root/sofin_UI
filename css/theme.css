@@ -4225,7 +4225,7 @@ body{overflow-x:hidden;max-width:100vw}html{
   object-fit: cover;
   z-index: 0;
   object-fit: cover;
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 .nav-link.active {
