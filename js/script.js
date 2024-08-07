@@ -12,16 +12,6 @@ themeToggleBtn.addEventListener("click", function () {
   themeToggleDarkIcon.classList.toggle("hidden"),
     themeToggleLightIcon.classList.toggle("hidden"),
     localStorage.getItem("color-theme")
-      ? "light" === localStorage.getItem("color-theme")
-        ? (document.documentElement.classList.add("dark"),
-          localStorage.setItem("color-theme", "dark"))
-        : (document.documentElement.classList.remove("dark"),
-          localStorage.setItem("color-theme", "light"))
-      : document.documentElement.classList.contains("dark")
-      ? (document.documentElement.classList.remove("dark"),
-        localStorage.setItem("color-theme", "light"))
-      : (document.documentElement.classList.add("dark"),
-        localStorage.setItem("color-theme", "dark"));
 });
 
 const btn = document.querySelector("button.mobile-menu-button"),
