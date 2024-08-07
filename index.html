@@ -1592,54 +1592,50 @@
         document.addEventListener('DOMContentLoaded', function () {
           const sections = document.querySelectorAll('section');
           const navLinks = document.querySelectorAll('.nav-list a');
-      
+          
           function setActiveLink() {
             let index = sections.length;
-      
+          
             while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
-      
+          
             navLinks.forEach((link) => link.classList.remove('active'));
             if (index >= 0) {
               navLinks[index].classList.add('active');
             }
           }
-      
+          
           window.addEventListener('scroll', setActiveLink);
-      
+          
           navLinks.forEach((link) => {
             link.addEventListener('click', function (e) {
-              if (this.getAttribute('href') === '#') {
-              if (this.getAttribute('href') === 'https://docs.sofin.app') {
+              const href = this.getAttribute('href');
+              
+              if (href === 'https://docs.sofin.app') {
+                // Open the URL in a new tab
+                window.open(href, '_blank');
                 e.preventDefault(); // Prevent default anchor behavior
-                window.location.href = 'https://docs.sofin.app';
-
-               
               } else {
                 e.preventDefault(); // Prevent default anchor behavior
-      
+                
                 // Remove active class from all links
                 navLinks.forEach((link) => link.classList.remove('active'));
                 // Add active class to the clicked link
                 this.classList.add('active');
-              // Remove active class from all links
-              navLinks.forEach((link) => link.classList.remove('active'));
-              // Add active class to the clicked link
-              this.classList.add('active');
-      
+                
                 // Smooth scroll to the target section
-                const targetSection = document.querySelector(this.getAttribute('href'));
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-              
-      
-                // Set a timeout to update the active link after the scrolling is complete
+                const targetSection = document.querySelector(href);
+                if (targetSection) {
+                  targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+                
+                // Set a timeout to update the active link after scrolling is complete
                 setTimeout(() => {
                   setActiveLink();
                 }, 100); // Adjust the timeout duration if needed
               }
-              // Set a timeout to update the active link after the scrolling is complete
             });
           });
-      
+          
           // Optionally, you can call this function on page load to set the initial active link
           setActiveLink();
         });
