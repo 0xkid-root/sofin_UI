@@ -754,7 +754,7 @@ video {
 }.mb-14{
   margin-bottom: 3.5rem;
 }.mb-15{
-  margin-bottom: 130px;
+  margin-bottom: 60px;
 }.mb-150{
   margin-bottom: 150px;
 }.mb-16{
@@ -3450,8 +3450,8 @@ body{overflow-x:hidden;max-width:100vw}html{
     margin-left: -170px;
   }.lg\:-mt-15{
     margin-top: -60px;
-  }.lg\:mb-32{
-    margin-bottom: 8rem;
+  }.lg\:mb-20{
+    margin-bottom: 0rem;
   }.lg\:ml-15{
     margin-left: 60px;
   }.lg\:ml-7{
